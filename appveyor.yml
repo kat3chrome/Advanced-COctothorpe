@@ -1,18 +1,5 @@
-image: Visual Studio 2019                           
-                
-branches:
-  except:
-    - master
-
-environment:
-  matrix:
-    - solution_name: Temporary
-                                          
-before_build:
-  - nuget restore tasks/%solution_name%/%solution_name%.sln
-
 build_script:
-  - msbuild tasks/%solution_name%/%solution_name%.sln
+  - dotnet build tasks/Temporary/Temporary.sln
 
 test_script:
-  - dotnet test tasks/%solution_name%/%solution_name%.sln
+  - dotnet test tasks/Temporary/Temporary.sln
