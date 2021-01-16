@@ -1,0 +1,5 @@
+build_script:
+  - dotnet build tasks/MyThreadPool/MyThreadPool.sln
+
+test_script:
+  - dotnet test tasks/MyThreadPool/MyThreadPool.sln
